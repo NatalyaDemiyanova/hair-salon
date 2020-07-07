@@ -1,0 +1,62 @@
+// Colors
+$white: #ffffff;
+// $light: #fefefe;
+// $grey-light: #e8e8e8;
+// $grey: #cccccc;
+$dark: #323232;
+$secondary-color: #C89667;
+// $darker: #232323;
+// $blue: #5474fd;
+// $placeholder-color: #999999;
+$divider-color: #C89667;
+
+// Text colors
+$text-main-color: #151515;
+$text-grey-color: 585858;
+$text-grey-light-color: #e8e8e8;
+$text-active: #C89667;
+
+
+
+
+// Bacground colors
+$navigation-bg-color: #303333;
+$about-bg-color: #F5F5F5;
+$pricing-bg-color: #F5F5F5;
+$social-bg-color: #3C3C3C;
+$social-bg-hover-color: #C89667;
+$footer-bg-color: #343333;
+
+// Button colors
+// $btn-color: #5474fd;
+
+
+// Fonts
+$base-font: "Poppins", sans-serif;
+$secondary-font: "Montserrat", sans-serif;
+
+@function calcRem($size) {
+  $remSize: $size / 16px;
+  @return #{$remSize}rem;
+}
+
+$H900: calcRem(150px);
+$H800: calcRem(55px);
+$H700: calcRem(45px);
+$H600: calcRem(28px);
+$H500: calcRem(22px);
+$H400: calcRem(18px);
+$H300: calcRem(16px);
+$H200: calcRem(15px);
+$H100: calcRem(14px);
+
+
+
+$screen-iphone: 375px;
+$screen-iphone-plus: 414px;
+$screen-small-tablet: 580px;
+$screen-tablet: 768px;
+$screen-desktop: 1024px;
+$screen-desktop-medium: 1080px;
+
+$screen-desktop-large: 1280px;
