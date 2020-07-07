@@ -1,5 +1,5 @@
 <template>
-  <div class="burger" @click="toggle" :class="{_active: isActive}">
+  <div class="burger">
     <span class="burger__line"></span>
   </div>
 </template>
@@ -9,16 +9,7 @@
 export default {
   name: 'TheBurger',
 
-  data: function() {
-    return {
-      isActive: false
-    }
-  },
-  methods: {
-    toggle: function() {
-      this.isActive = !this.isActive;
-    },
-  }
+  
 }
 </script>
 
@@ -73,6 +64,5 @@ export default {
       top: 9px;
     }
   }
-
 
 </style>
