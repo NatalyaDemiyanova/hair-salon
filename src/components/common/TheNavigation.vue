@@ -76,7 +76,7 @@ export default {
       width: 320px;
       background-color: $navigation-bg-color;
       padding: 50px 40px;
-      // display: none;
+      display: none;
       @include media($screen-desktop) {
         @include flex(space-between, center);
         position: static;
