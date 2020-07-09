@@ -20,7 +20,8 @@ $text-active: #C89667;
 
 
 // Bacground colors
-$navigation-bg-color: #303333;
+$navigation-bg-color: rgba(52, 51, 51, 0.6);
+$navigation-bg-scroll-color: rgba(52, 51, 51, 1);
 $about-bg-color: #F5F5F5;
 $pricing-bg-color: #F5F5F5;
 $social-bg-color: #3C3C3C;
@@ -49,7 +50,7 @@ $H400: calcRem(18px);
 $H300: calcRem(16px);
 $H200: calcRem(15px);
 $H100: calcRem(14px);
-
+$H50: calcRem(13px);
 
 
 $screen-iphone: 375px;

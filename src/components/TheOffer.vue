@@ -9,7 +9,7 @@
 				<li class="offer__item card">
 					<div class="card__image-wrapper">
 						<img class="card__image" src="../assets/offer/haircuts.jpg" alt="haircuts">
-						<!-- <button class="card__button button"></button> -->
+						<the-button class="card__button button button--order"> order now</the-button>	
 					</div>
 					<h3 class="card__title">
 						<a class="card__link" href="#">
@@ -21,7 +21,7 @@
 				<li class="offer__item card">
 					<div class="card__image-wrapper">
 						<img class="card__image" src="../assets/offer/hairstyling.jpg" alt="hairstyling">
-						<!-- <button class="card__button button"></button> -->
+						<the-button class="card__button button button--order"> order now</the-button>	
 					</div>
 					<h3 class="card__title">
 						<a class="card__link" href="#">
@@ -33,7 +33,7 @@
 				<li class="offer__item card">
 					<div class="card__image-wrapper">
 						<img class="card__image" src="../assets/offer/coloring.jpg" alt="coloring">
-						<!-- <button class="card__button button"></button> -->
+						<the-button class="card__button button button--order"> order now</the-button>	
 					</div>
 					<h3 class="card__title">
 						<a class="card__link" href="#">
@@ -48,10 +48,12 @@
 </template>
 
 <script>
+import TheButton from './common/TheButton'
 
 export default {
   name: 'TheOffer',
   components: {
+	TheButton
   }
 }
 </script>
@@ -63,7 +65,6 @@ export default {
 	@include media($screen-small-tablet) {
 		padding: 80px 0;
 	}
-	
 	@include media($screen-desktop) {
 		padding: 115px 0;
 	}
@@ -132,6 +133,7 @@ export default {
 	@include flex(center, center, column);
 
 	&__image-wrapper {
+		position: relative;
 		margin-bottom: 10px;
 
 		@include media($screen-small-tablet) {
@@ -140,10 +142,26 @@ export default {
 	}
 
 	&__image {
-		width: 100%;
+		width: 100%; 
+		transition: all 0.3s ease-in-out;
+
+		&:hover + .card__button {
+			visibility: visible;
+		}
+
 	}
 
 	&__button {
+		position: absolute;
+		bottom: 15%;
+		left: 50%;
+		transform: translateX(-50%);
+		visibility: hidden;
+
+		&:hover {
+			visibility: visible;
+		}
+
 	}
 
 	&__title {

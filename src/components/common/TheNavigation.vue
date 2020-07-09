@@ -1,5 +1,5 @@
 <template>
-  <div class="navigation" id="nav">
+  <div class="navigation" v-scroll="handleScroll" id="nav">
     <div class="container navigation__container">
       <logo />
       <transition name="fade">
@@ -33,6 +33,7 @@
 import Logo from './Logo.vue'
 import TheBurger from './TheBurger'
 
+
 export default {
   name: 'TheNavigation',
   components: {
@@ -45,11 +46,14 @@ export default {
       isShow: false
     }
   },
+
+  
   methods: {
     toggle: function() {
       this.isActive = !this.isActive;
       this.isShow = !this.isShow;
     },
+    
   }
 }
 </script>
@@ -57,11 +61,11 @@ export default {
 <style lang="scss">
   .navigation {
     position: fixed;
-    // position: sticky;
+    position: sticky;
     top: 0;
     right: 0;
     left: 0;
-    padding: 10px 0;
+    padding: 32px 0;
     background-color: $navigation-bg-color;
     z-index: 10;
 
@@ -74,13 +78,17 @@ export default {
       top: 80px;
       right: 0px;
       width: 320px;
-      background-color: $navigation-bg-color;
+      // background-color: $navigation-bg-color;
       padding: 50px 40px;
       display: none;
       @include media($screen-desktop) {
         @include flex(space-between, center);
         position: static;
         width: auto;
+        top: 0;
+        padding: 0;
+
+
       }
     }
 
