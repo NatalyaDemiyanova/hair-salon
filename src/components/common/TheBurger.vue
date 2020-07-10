@@ -1,15 +1,12 @@
 <template>
-  <div class="burger">
+  <div class="burger" @click="$emit('click')">
     <span class="burger__line"></span>
   </div>
 </template>
 
 <script>
-
 export default {
-  name: 'TheBurger',
-
-  
+  name: 'TheBurger'
 }
 </script>
 
@@ -52,17 +49,17 @@ export default {
 }
 
 ._active {
-    .burger__line {
-      transform: scale(0);
-    }
-    &::before {
-      transform: rotate(45deg);
-      top: 9px;
-    }
-    &::after {
-      transform: rotate(-45deg);
-      top: 9px;
-    }
+  .burger__line {
+    transform: scale(0);
   }
+  &::before {
+    transform: rotate(45deg);
+    top: 9px;
+  }
+  &::after {
+    transform: rotate(-45deg);
+    top: 9px;
+  }
+}
 
 </style>

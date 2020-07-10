@@ -1,5 +1,6 @@
 <template>
   <div class="pricing">
+    <app-layout  title="pricing" class="pricing__layout"/>
     <div class="container pricing__container">
       <div class="pricing__body">
         <ul class="pricing__list">
@@ -20,6 +21,7 @@
 </template>
 
 <script>
+import AppLayout from '../components/common/AppLayout'
 import ThePricingHaircuts from '../components/common/ThePricingHaircuts'
 import ThePricingHairstyling from '../components/common/ThePricingHairstyling'
 import ThePricingColoring from '../components/common/ThePricingColoring'
@@ -27,6 +29,7 @@ import ThePricingColoring from '../components/common/ThePricingColoring'
 export default {
   name: 'Pricing',
   components: {
+    AppLayout,
     ThePricingHaircuts,
     ThePricingHairstyling,
     ThePricingColoring
@@ -37,24 +40,23 @@ export default {
       component: 'ThePricingHaircuts', 
     }
   },
-  // methods: {
-  //   showActiveClass: function() {
-  //     this.isActive = true
-  //   },
-  // }
 }
 </script>
 
 <style lang="scss">
 .pricing {
   background-color: $pricing-bg-color;
-  padding: 100px 10px;
+
+  &__layout {
+    margin-bottom: 115px;
+  }
   
   &__body {
     background-color: $white;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
     overflow: hidden;
+    margin-bottom: 115px;
   }
 
   &__list {
@@ -99,5 +101,4 @@ export default {
   color: $white;
   opacity: 1;
 }
-
 </style>

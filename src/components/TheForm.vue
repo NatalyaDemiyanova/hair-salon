@@ -19,18 +19,18 @@
 					<input class="form__input" type="data" placeholder="20/07/2020">
 				</label>
 			</div>
-			<the-button class="form__button">make an appointment</the-button>
+			<app-button class="form__button">make an appointment</app-button>
 		</div>
   </form>
 </template>
 
 <script>
-import TheButton from './common/TheButton'
+import AppButton from './common/AppButton'
 
 export default {
   name: 'TheForm',
   components: {
-		TheButton,  
+		AppButton,  
   }
 }
 </script>

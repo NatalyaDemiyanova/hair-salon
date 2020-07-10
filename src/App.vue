@@ -2,16 +2,19 @@
   <div id="app" class="app">
     <the-navigation />	
     <router-view class="app__router"/>
+    <the-footer />
   </div>
 </template>
 
 <script>
 import TheNavigation from './components/common/TheNavigation'
+import TheFooter from './components/TheFooter'
 
 export default {
 	name: 'App',
 	components: {
-		TheNavigation
+    TheNavigation, 
+    TheFooter
   },
 }
 </script>
@@ -20,7 +23,6 @@ export default {
 .app {
   display: flex;
   flex-direction: column;
-  // @include flex(center, center, column);
   min-height: 100vh;
 
   &__router {

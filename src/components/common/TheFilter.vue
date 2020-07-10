@@ -42,6 +42,7 @@ export default {
 		margin-right: 24px;
 	}
 	&__input {
+		display: none;
 		&:checked + .filter__name {
 			color: $text-active;
 		}

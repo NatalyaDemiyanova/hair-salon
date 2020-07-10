@@ -4,7 +4,7 @@ import Home from '../views/Home.vue'
 import About from '../views/About.vue'
 import Gallery from '../views/Gallery.vue'
 import Pricing from '../views/Pricing.vue'
-import Contact from '../views/Contact.vue'
+import Contacts from '../views/Contacts.vue'
 
 Vue.use(VueRouter)
 
@@ -30,9 +30,9 @@ Vue.use(VueRouter)
     component: Pricing
   },
   {
-    path: '/contact',
-    name: 'Contact',
-    component: Contact
+    path: '/contacts',
+    name: 'Contacts',
+    component: Contacts
   }  
 ]
 

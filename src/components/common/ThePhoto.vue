@@ -1,12 +1,13 @@
 <template>
-  <div class="the-photo">
+  <div class="photo">
 		<the-filters 
 			:filter="filter" 
 			v-model="filter" 
+			class="photo__filters"
 		/>
-    <div class="the-photo__container container">
+    <div class="photo__container container">
 			<the-photo-item
-				class="the-photo__item"
+				class="photo__item"
 				v-for="photo in PHOTOS"
 				:key="photo.image"
 				:photo_data="photo"
@@ -19,7 +20,6 @@
 import ThePhotoItem from './ThePhotoItem'
 import {mapActions, mapGetters} from 'vuex'
 import TheFilters from '@/components/common/TheFilters'
-
 
 export default {
   name: 'ThePhoto',
@@ -43,18 +43,6 @@ export default {
 			'GET_PHOTOS_FROM_API'
 		]),
 
-		filterCategories(filter) {
-			this.filterPhotos = [];
-			let vm = this;
-			vm.PHOTOS.map(function(photo) {
-				if (photo.category === filter) {
-					console.log(vm.filterPhotos.push(photo));
-					
-				}
-			})
-
-		}
-
   },
   mounted() {
     this.GET_PHOTOS_FROM_API()
@@ -64,7 +52,11 @@ export default {
 </script>
 
 <style lang="scss">
-.the-photo {
+.photo {
+	&__filters {
+		margin-bottom: 20px;
+	}
+
 	&__container {
 		@include flex(space-between, center);
 		flex-wrap: wrap;

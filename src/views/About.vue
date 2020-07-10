@@ -1,102 +1,35 @@
 <template>
-  <div class="about">
-    <div class="container about__container">
-      <div class="about__image-wrapper">
-        <img class="about__image" src="../assets/about.jpg" alt="about">
-      </div>
-      <div class="about__content">
-        <h2 class="about__title">ABOUT US</h2>
-        <div class="about__subtitle">
-          <div class="about__subtitle-divider"></div>
-          <h3 class="about__subtitle-text">
-            OFFERING THE BEST HAIRSTYLING SERVICES
-          </h3>
-        </div>
-        <p class="about__description">
-          Ullamcorper a lacus vestibulum sed arcu non odio euismod. Sociis natoque penatibus et magnis dis parturient montes nascetur. Non sodales neque sodales ut etiam sit amet nisl purus. Pharetra magna ac placerat vestibulum lectus mauris ultrices eros in.
-        </p>
-        <p class="about__description">
-         Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur
-        </p>
-      </div>
-    </div>
-   
+  <div class="about-main">
+    <app-layout class="about-main__layout" title="about us" />
+    <the-about-description class="about-main__about-description" />
+    
   </div>
 </template>
 
 <script>
+import AppLayout from '../components/common/AppLayout'
+import TheAboutDescription from '../components/TheAboutDescription'
 
 export default {
   name: 'About',
   components: {
-   
+    AppLayout,
+    TheAboutDescription
   }
 }
 </script>
 
 <style lang="scss">
-  .about {
-    background-color: $about-bg-color;
-    padding: 115px 0;
+.about-main {
+  &__about-description {
+    padding: 70px 0;
 
-		&__container {
-      width: 100%;
-      padding: 0 15px;
-      @include flex(space-between, center);
-		}
-
-		&__image-wrapper {
-      width: 50%;
-      margin-right: 50px;
+    @include media($screen-desktop) {
+      padding: 115px 0;
     }
-    
-    &__image {
-      width: 100%;
-    }
-
-		&__content {
-      width: 50%;
-      padding: 0 15px;
-      text-align: left;
-		}
-
-		&__title {
-      @include text($H600, 700, $text-main-color);
-      font-family: $secondary-font;
-      margin-bottom: 30px;
-		}
-
-		&__subtitle {
-      font-family: $secondary-font;
-      @include flex(flex-start, center);
-      color: $text-main-color;
-      opacity: 0.7;
-      margin-bottom: 50px;
-		}
-
-		&__subtitle-divider {
-      width: 40px;
-      height: 2px;
-      background-color: $divider-color;
-      margin-right: 20px;
-		}
-
-		&__subtitle-text {
-      max-width: 300px;
-      @include text($H500, 600, $text-main-color);
-      opacity: 0.85;
-
-		}
-
-		&__description {
-      font-family: $secondary-font;
-      @include text($H200, 300, $text-main-color);
-      opacity: 0.7;
-      line-height: 1.7;
-      &:not(:last-of-type) {
-        margin-bottom: 20px;
-      }
-		}
   }
+
+}
+
 
 </style>

@@ -1,11 +1,13 @@
 <template>
   <div class="gallery">
+    <app-layout class="gallery__layout" title="gallery" />
     <!-- <the-filters :filter="filter" v-model="filter" /> -->
-    <the-photo />
+    <the-photo class="gallery__photo" />
   </div>
 </template>
 
 <script>
+import AppLayout from '../components/common/AppLayout'
 // import TheFilters from '@/components/common/TheFilters'
 import ThePhoto from '@/components/common/ThePhoto'
 import {mapGetters} from 'vuex'
@@ -13,13 +15,13 @@ import {mapGetters} from 'vuex'
 export default {
   name: 'Gallery',
   components: {
+    AppLayout,
   //  TheFilters,
-   ThePhoto
+    ThePhoto
   },
 
   data() {
     return {
-      // data: [...this.$store.state.photos],
       filter: 'all',
     }
   },
@@ -28,21 +30,14 @@ export default {
 		...mapGetters([
 			'PHOTOS'
     ]),
-    // PHOTOS() {
-    //   return this.$store.state.photos;
-    // }, 
-    // getCategory() {
-    //   const {data, filter} = this;
-    //   switch(filter) {
-    //     default:
-    //       return data;
-    //       case 'haircuts':
-    //         return console.log(data.filter( ({haircuts}) => haircuts));
-    //   }
-    // }
   },
-
- 
-
 }
 </script>
+
+<style lang="scss">
+.gallery {
+  &__photo {
+    padding: 60px 0 100px;
+  }
+}
+</style>

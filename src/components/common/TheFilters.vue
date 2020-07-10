@@ -1,10 +1,13 @@
 <template>
 	<div class="filters">
-		<the-filter val="all" v-model="filterModel">ALL</the-filter>
-		<the-filter val="haircuts" v-model="filterModel">HAIRCUTS</the-filter>
-		<the-filter val="coloring" v-model="filterModel">COLORING</the-filter>
-		<the-filter val="hightlights" v-model="filterModel">HIGHLIGHTS</the-filter>
-		<the-filter val="other" v-model="filterModel">OTHER</the-filter>
+		<div class="filters__wrapper">
+			<the-filter val="all" v-model="filterModel">ALL</the-filter>
+			<the-filter val="haircuts" v-model="filterModel">HAIRCUTS</the-filter>
+			<the-filter val="coloring" v-model="filterModel">COLORING</the-filter>
+			<the-filter val="hightlights" v-model="filterModel">HIGHLIGHTS</the-filter>
+			<the-filter val="other" v-model="filterModel">OTHER</the-filter>
+		</div>
+		<app-button class="filters__button button button--black">FILTER</app-button>
 	</div>
 </template>
 
@@ -29,17 +32,32 @@ export default {
 			}
 		}
 	},
-
 }
 </script>
 
 <style lang="scss">
 .filters {
 	@include flex(center, center);
+	&__wrapper {
+		display: none;
+
+		@include media($screen-small-tablet) {
+			@include flex(center, center);
+		}
+	}
 
 	&__item {
 		&:not(:last-of-type) {
 			margin-right: 32px;
+		}
+	}
+
+	&__button {
+		display: block;
+		margin: 0 24px;
+
+		@include media($screen-small-tablet) {
+			display: none;
 		}
 	}
 }

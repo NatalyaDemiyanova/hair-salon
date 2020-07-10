@@ -1,11 +1,12 @@
 <template>
-  <button class="button"><slot/></button>
+  <div class="container">
+    <button class="button"><slot/></button>
+  </div>
 </template>
 
 <script>
-
 export default {
-  name: 'Button',
+  name: 'AppButton',
 }
 </script>
 
@@ -15,8 +16,10 @@ export default {
   padding: 18px 35px;
   @include text($H200, 500, $dark);
   text-transform: uppercase;
+  text-align: center;
   background-color: $white;
   border: none;
+  outline: none;
   white-space: nowrap;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
@@ -28,17 +31,20 @@ export default {
 
   &--order {
     padding: 12px 25px;
+    margin: 0 24px;
     @include text($H50, 500, $white);
     text-transform: uppercase;
     background-color: $secondary-color;
   }
 
+  &--black {
+    background-color: $dark;
+    @include text($H200, 500, $white);
+  }
+
   @include media($screen-small-tablet) {
     width: auto;
   }
-
-  
-
 }
 
 .button--order {

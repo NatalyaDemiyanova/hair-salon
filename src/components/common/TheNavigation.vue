@@ -3,23 +3,7 @@
     <div class="container navigation__container">
       <logo />
       <transition name="fade">
-        <ul class="navigation__list" :class="{_show: isShow}">
-          <li class="navigation__item">
-            <router-link class="navigation__link" exact to="/">HOME</router-link>
-          </li>
-          <li class="navigation__item">
-            <router-link class="navigation__link" to="/about">ABOUT US</router-link>
-          </li>
-          <li class="navigation__item">
-            <router-link class="navigation__link" to="/gallery">GALLERY</router-link>
-          </li>
-          <li class="navigation__item">
-            <router-link class="navigation__link" to="/pricing">PRICING</router-link>
-          </li>
-          <li class="navigation__item">
-            <router-link class="navigation__link" to="/contacts">CONTACTS</router-link>
-          </li>
-        </ul>
+        <the-navigation-list class="navigation__header" :class="{_active: isActive}" />
       </transition>
       <div class="navigation__social"></div>
       <transition name="fade">
@@ -31,89 +15,125 @@
 
 <script>
 import Logo from './Logo.vue'
+import TheNavigationList from './TheNavigationList'
 import TheBurger from './TheBurger'
-
 
 export default {
   name: 'TheNavigation',
   components: {
     Logo,
-    TheBurger
+    TheBurger,
+    TheNavigationList
   },
   data: function() {
     return {
       isActive: false,
-      isShow: false
     }
   },
-
-  
   methods: {
     toggle: function() {
       this.isActive = !this.isActive;
-      this.isShow = !this.isShow;
     },
+
+    handleScroll: function(evt, el) {
+      if (window.scrollY > 0) {
+        el.setAttribute("style", "color:red; opacity: 1; padding: 10px 0")
+      }
+      return window.scrollY > 0;
+    }
     
   }
 }
 </script>
 
 <style lang="scss">
-  .navigation {
-    position: fixed;
-    position: sticky;
-    top: 0;
-    right: 0;
-    left: 0;
-    padding: 32px 0;
-    background-color: $navigation-bg-color;
-    z-index: 10;
+.navigation {
+  position: fixed;
+  // position: sticky;
+  top: 0;
+  right: 0;
+  left: 0;
+  padding: 32px 0;
+  background-color: $navigation-bg-color;
+  z-index: 10;
 
-    &__container {
-      @include flex(space-between, center);
-    }
-
-    &__list {
-      position: absolute;
-      top: 80px;
-      right: 0px;
-      width: 320px;
-      // background-color: $navigation-bg-color;
-      padding: 50px 40px;
-      display: none;
-      @include media($screen-desktop) {
-        @include flex(space-between, center);
-        position: static;
-        width: auto;
-        top: 0;
-        padding: 0;
-
-
-      }
-    }
-
-    &__item {
-      &:not(:last-of-type) {
-        margin-right: 32px;
-      } 
-    }
-
-    &__link {
-      // font-family: $secondary-font;
-      @include text($H200, 500, $white);
-      letter-spacing: .02em;
-      &:active {
-        color: $text-active;
-      }
-    }
+  &__container {
+    @include flex(space-between, center);
   }
 
-  .router-link-active {
-    color: $text-active;
-  }
-  
-  ._show {
+  &__header {
+    position: absolute;
+    top: 100px;
+    right: 0px;
+    width: 100%;
+    padding: 50px 40px;
+    // background-color: $navigation-bg-color;
+    @include flex(center, center, column);
     display: none;
+    text-align: center;
+
+    @include media($screen-desktop) {
+      @include flex(center, center);
+      position: static;
+      width: auto;
+      top: 0;
+      padding: 0;
+      background-color: none;
+    }
   }
+
+  // &__list {
+  //   position: absolute;
+  //   top: 100px;
+  //   right: 0px;
+  //   width: 100%;
+  //   padding: 50px 40px;
+  //   background-color: $navigation-bg-color;
+  //   @include flex(center, center, column);
+  //   display: none;
+  //   text-align: center;
+
+  //   @include media($screen-desktop) {
+  //     @include flex(space-between, center);
+  //     position: static;
+  //     width: auto;
+  //     top: 0;
+  //     padding: 0;
+  //     background-color: none;
+  //   }
+  // }
+
+  // &__item {
+  //   &:not(:last-of-type) {
+  //     margin-right: 0px;
+  //     margin-bottom: 24px;
+
+  //   }
+    
+  //   @include media($screen-desktop) {
+  //     &:not(:last-of-type) {
+  //       margin-right: 32px;
+  //       margin-bottom: 0px;
+  //     }
+  //   }
+  // }
+
+  // &__link {
+  //   // font-family: $secondary-font;
+  //   @include text($H200, 500, $white);
+  //   letter-spacing: .02em;
+  //   &:active {
+  //     color: $text-active;
+  //   }
+  // }
+}
+
+.router-link-active {
+  color: $text-active;
+}
+
+._active {
+  display: block;
+}
 
 </style> 

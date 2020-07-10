@@ -9,7 +9,7 @@
 				<li class="offer__item card">
 					<div class="card__image-wrapper">
 						<img class="card__image" src="../assets/offer/haircuts.jpg" alt="haircuts">
-						<the-button class="card__button button button--order"> order now</the-button>	
+						<app-button class="card__button button button--order"> order now</app-button>	
 					</div>
 					<h3 class="card__title">
 						<a class="card__link" href="#">
@@ -21,7 +21,7 @@
 				<li class="offer__item card">
 					<div class="card__image-wrapper">
 						<img class="card__image" src="../assets/offer/hairstyling.jpg" alt="hairstyling">
-						<the-button class="card__button button button--order"> order now</the-button>	
+						<app-button class="card__button button button--order"> order now</app-button>	
 					</div>
 					<h3 class="card__title">
 						<a class="card__link" href="#">
@@ -33,7 +33,7 @@
 				<li class="offer__item card">
 					<div class="card__image-wrapper">
 						<img class="card__image" src="../assets/offer/coloring.jpg" alt="coloring">
-						<the-button class="card__button button button--order"> order now</the-button>	
+						<app-button class="card__button button button--order"> order now</app-button>	
 					</div>
 					<h3 class="card__title">
 						<a class="card__link" href="#">
@@ -48,12 +48,12 @@
 </template>
 
 <script>
-import TheButton from './common/TheButton'
+import AppButton from './common/AppButton'
 
 export default {
   name: 'TheOffer',
   components: {
-	TheButton
+	AppButton
   }
 }
 </script>
@@ -148,7 +148,6 @@ export default {
 		&:hover + .card__button {
 			visibility: visible;
 		}
-
 	}
 
 	&__button {
@@ -161,7 +160,6 @@ export default {
 		&:hover {
 			visibility: visible;
 		}
-
 	}
 
 	&__title {

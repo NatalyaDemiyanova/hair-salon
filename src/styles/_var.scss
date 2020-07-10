@@ -16,21 +16,16 @@ $text-grey-color: 585858;
 $text-grey-light-color: #e8e8e8;
 $text-active: #C89667;
 
-
-
-
 // Bacground colors
-$navigation-bg-color: rgba(52, 51, 51, 0.6);
+$navigation-bg-color: rgba(52, 51, 51, 0.8);
 $navigation-bg-scroll-color: rgba(52, 51, 51, 1);
 $about-bg-color: #F5F5F5;
 $pricing-bg-color: #F5F5F5;
 $social-bg-color: #3C3C3C;
-$social-bg-hover-color: #C89667;
 $footer-bg-color: #343333;
 
 // Button colors
 // $btn-color: #5474fd;
-
 
 // Fonts
 $base-font: "Poppins", sans-serif;
@@ -40,10 +35,11 @@ $secondary-font: "Montserrat", sans-serif;
   $remSize: $size / 16px;
   @return #{$remSize}rem;
 }
-
 $H900: calcRem(150px);
+$H850: calcRem(60px);
 $H800: calcRem(55px);
 $H700: calcRem(45px);
+$H650: calcRem(32px);
 $H600: calcRem(28px);
 $H500: calcRem(22px);
 $H400: calcRem(18px);
@@ -52,12 +48,10 @@ $H200: calcRem(15px);
 $H100: calcRem(14px);
 $H50: calcRem(13px);
 
-
 $screen-iphone: 375px;
 $screen-iphone-plus: 414px;
 $screen-small-tablet: 580px;
 $screen-tablet: 768px;
 $screen-desktop: 1024px;
 $screen-desktop-medium: 1080px;
-
 $screen-desktop-large: 1280px;

@@ -23,8 +23,5 @@ export default {
 	height: 100vh;
 	position: relative;
 	top: 0px;
-
 }
-
-
 </style>
