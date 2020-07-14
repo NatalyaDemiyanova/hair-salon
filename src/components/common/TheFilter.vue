@@ -38,9 +38,7 @@ export default {
 <style lang="scss">
 .filter {
 	cursor: pointer;
-	&:not(:last-of-type) {
-		margin-right: 24px;
-	}
+	
 	&__input {
 		display: none;
 		&:checked + .filter__name {

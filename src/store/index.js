@@ -9,11 +9,11 @@ let store = new Vuex.Store({
 		photos: []
 	},
 	
-	mutations: {
-		SET_PHOTOS_TO_STATE: (state, photos) => {
-			state.photos = photos;
-		}
-	},
+	// mutations: {
+	// 	SET_PHOTOS_TO_STATE: (state, photos) => {
+	// 		state.photos = ;
+	// 	}
+	// },
 
 	actions: {
 		GET_PHOTOS_FROM_API({commit}) {

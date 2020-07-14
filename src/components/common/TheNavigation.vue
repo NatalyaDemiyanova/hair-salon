@@ -28,6 +28,7 @@ export default {
   data: function() {
     return {
       isActive: false,
+      handleScroll: false
     }
   },
   methods: {
@@ -35,12 +36,12 @@ export default {
       this.isActive = !this.isActive;
     },
 
-    handleScroll: function(evt, el) {
-      if (window.scrollY > 0) {
-        el.setAttribute("style", "color:red; opacity: 1; padding: 10px 0")
-      }
-      return window.scrollY > 0;
-    }
+    // handleScroll: function(evt, el) {
+    //   if (window.scrollY > 50) {
+    //     el.setAttribute("style", "color:red; ")
+    //   }
+    //   // return window.scrollY > 100;
+    // }
     
   }
 }
