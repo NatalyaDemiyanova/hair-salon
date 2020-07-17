@@ -1,10 +1,10 @@
 <template>
-  <div class="photo-item">
+  <li class="photo-item">
     <img 
       class="photo-item__image" 
       :src=" require('../../assets/gallery/' + photo_data.image)" 
       alt="hair">
-  </div>
+  </li>
 </template>
 
 <script>
