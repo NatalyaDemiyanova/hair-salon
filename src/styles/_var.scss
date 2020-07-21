@@ -21,6 +21,7 @@ $navigation-bg-color: rgba(52, 51, 51, 0.8);
 $navigation-bg-scroll-color: rgba(52, 51, 51, 1);
 $about-bg-color: #F5F5F5;
 $pricing-bg-color: #F5F5F5;
+$grey-light-bg-color: #F5F5F5;
 $social-bg-color: #3C3C3C;
 $footer-bg-color: #343333;
 
@@ -35,7 +36,8 @@ $secondary-font: "Montserrat", sans-serif;
   $remSize: $size / 16px;
   @return #{$remSize}rem;
 }
-$H900: calcRem(150px);
+$H950: calcRem(150px);
+$H900: calcRem(75px);
 $H850: calcRem(60px);
 $H800: calcRem(55px);
 $H700: calcRem(45px);

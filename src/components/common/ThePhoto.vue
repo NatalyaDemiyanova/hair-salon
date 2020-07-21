@@ -59,17 +59,15 @@ export default {
 		flex-wrap: wrap;
 	}
 
-	// &__item {
-	// }
 }
 .list-flip-item {
-  transition: all 0.2s;
+  transition: all 0.5s;
   display: inline-flex;
   margin-right: 10px;
 }
 .list-flip-enter, .list-flip-leave-to {
   opacity: 0;
-  transform: translateX(30px);
+  transform: translateY(100px);
 }
 .list-flip-leave-active {
   position: absolute;

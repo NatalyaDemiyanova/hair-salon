@@ -3,7 +3,7 @@ import App from './App.vue'
 import router from './router'
 import store from './store'
 import './styles/styles.scss'
-// import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
+import 'material-design-icons-iconfont'
 import VueGlide from 'vue-glide-js'
 import 'vue-glide-js/dist/vue-glide.css'
 

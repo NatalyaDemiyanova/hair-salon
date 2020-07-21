@@ -1,7 +1,5 @@
 <template>
-  <div class="container">
-    <button class="button"><slot/></button>
-  </div>
+  <button class="button"><slot/></button>
 </template>
 
 <script>
@@ -33,7 +31,6 @@ export default {
     padding: 12px 25px;
     margin: 0 24px;
     @include text($H50, 500, $white);
-    text-transform: uppercase;
     background-color: $secondary-color;
   }
 

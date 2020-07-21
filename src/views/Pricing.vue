@@ -48,7 +48,11 @@ export default {
   background-color: $pricing-bg-color;
 
   &__layout {
-    margin-bottom: 115px;
+    margin-bottom: 80px;
+
+    @include media($screen-tablet) {
+      margin-bottom: 115px;
+    }
   }
   
   &__body {
