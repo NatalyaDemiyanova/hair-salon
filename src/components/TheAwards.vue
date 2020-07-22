@@ -37,10 +37,13 @@ export default {
 
 <style lang="scss">
 .awards {
-	padding: 100px 0;
 	background-color: $about-bg-color;
+	padding: 50px 0;
 
-	@include media {
+	@include media($screen-small-tablet) {
+		padding: 80px 0;
+	}
+	@include media($screen-desktop) {
 		padding: 115px 0;
 	}
 
@@ -52,8 +55,12 @@ export default {
 		font-family: $secondary-font;
 		@include text($H600, 700);
 		text-transform: uppercase;
-		margin-bottom: 100px;
+		margin-bottom: 50px;
 
+		@include media($screen-desktop) {
+			font-size: $H650;
+			margin-bottom: 100px;
+		}
 		@include media {
 			font-size: $H700;
 		}

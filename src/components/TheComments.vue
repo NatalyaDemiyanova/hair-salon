@@ -23,7 +23,14 @@ export default {
 .comments {
 	background-image: url(../assets/comments-bg.jpg);
 	@include background-image;
-	padding: 115px 0;
+	padding: 80px 0;
+
+	@include media($screen-small-tablet) {
+		padding: 100px 0;
+	}
+	@include media($screen-desktop) {
+		padding: 115px 0;
+	}
 
 	&__container {
 		@include flex(center, center, column);
@@ -31,20 +38,25 @@ export default {
 
 	&__title {
 		font-family: $secondary-font;
-		@include text($H700, 700, $white);
+		@include text($H600, 700, $white);
 		text-transform: uppercase;
-		margin-bottom: 80px;
+		margin-bottom: 50px;
+
+		@include media($screen-desktop) {
+			font-size: $H650;
+		}
+		@include media {
+			font-size: $H700;
+		}
 	}
 
 	&__wrapper-slider {
 		width: 90%;
 		@include flex(center, center);
-		
 	}
 
 	&__slider {
 			width: 100%;
-	
 	}
 }
 </style>

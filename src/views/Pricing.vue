@@ -48,7 +48,7 @@ export default {
   background-color: $pricing-bg-color;
 
   &__layout {
-    margin-bottom: 80px;
+    margin-bottom: 60px;
 
     @include media($screen-tablet) {
       margin-bottom: 115px;
@@ -60,7 +60,11 @@ export default {
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
     overflow: hidden;
-    margin-bottom: 115px;
+    margin-bottom: 60px;
+
+    @include media($screen-tablet) {
+      margin-bottom: 115px;
+    }
   }
 
   &__list {

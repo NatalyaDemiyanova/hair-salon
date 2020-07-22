@@ -155,6 +155,7 @@ export default {
 		bottom: 15%;
 		left: 50%;
 		transform: translateX(-50%);
+		transition: all 0.3s ease-in-out;
 		visibility: hidden;
 
 		&:hover {
@@ -167,7 +168,6 @@ export default {
 	}
 
 	&__link {
-		@include text($H500, 600);
 		font-family: $secondary-font;
 		@include text($H500, 600);
 		text-transform: uppercase;

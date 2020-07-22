@@ -81,7 +81,15 @@ export default {
   &__title {
     @include text($H600, 700, $text-main-color);
     font-family: $secondary-font;
-    margin-bottom: 30px;
+		margin-bottom: 30px;
+		
+		@include media($screen-desktop) {
+			font-size: $H650;
+		}
+		@include media {
+			font-size: $H700;
+		}
+
   }
 
   &__subtitle {
@@ -89,10 +97,13 @@ export default {
     @include flex(flex-start, center, column);
     color: $text-main-color;
     opacity: 0.7;
-		margin-bottom: 50px;
+		margin-bottom: 30px;
 		
 		@include media($screen-desktop) {
 			@include flex(flex-start, center);
+		}
+		@include media {
+			margin-bottom: 50px;
 		}
   }
 

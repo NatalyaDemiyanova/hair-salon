@@ -5,12 +5,12 @@
         <div class="contact-info__image-wrapper">
           <img class="contact-info__image" src="../assets/phone-2.png" alt="phone">
         </div>
-        <span class="contact-info__square"></span>
         <h3 class="contact-info__title">
           <a href="#" class="contact-info__link">
             1-800-123-1234
           </a>
         </h3>
+        <span class="contact-info__square"></span>
         <span class="contact-info__text">
           You can call us anytime
         </span>
@@ -19,24 +19,24 @@
         <div class="contact-info__image-wrapper">
           <img class="contact-info__image" src="../assets/address.png" alt="address">
         </div>
-        <span class="contact-info__square"></span>
         <h3 class="contact-info__title">
           <a href="#" class="contact-info__link">
             51 FRANCIS STREET, DARLINGHURST NSW 2010, UNITED STATES
           </a>
         </h3>
+        <span class="contact-info__square"></span>
         <span class="contact-info__text"></span>
       </div>
       <div class="contact-info__box">
         <div class="contact-info__image-wrapper">
           <img class="contact-info__image" src="../assets/email.png" alt="email">
         </div>
-        <span class="contact-info__square"></span>
         <h3 class="contact-info__title">
           <a href="#" class="contact-info__link" >
             INFO@DEMOLINK.ORG
           </a>
         </h3>
+        <span class="contact-info__square"></span>
         <span class="contact-info__text">
           Feel free to email us your questions
         </span>
@@ -91,20 +91,12 @@ export default {
     margin-bottom: 20px;
   }
 
-  &__square {
-    position: absolute;
-    top: 12%;
-    left: 59%;
-    width: 16px;
-    height: 16px;
-    background-color: $secondary-color;
-    opacity: 0.6;
-    transform: translateY(0) rotate(45deg);
-    transition: all .6s;
-  }
-
   &__title {
     text-align: center;
+    
+    &:hover + .contact-info__square {
+      transform: translateX(-200%) rotate(270deg);
+    }
   }
 
   &__link {
@@ -116,10 +108,19 @@ export default {
     &:hover {
       color: $secondary-color;
     }
-    
-    &:hover + .contact-info__square {
-      background-color: red;
-    }
+  }
+  
+  &__square {
+    position: absolute;
+    top: 12%;
+    left: 59%;
+    width: 16px;
+    height: 16px;
+    background-color: $secondary-color;
+    opacity: 0.6;
+    transform: translateY(0) rotate(45deg);
+    transition: all .6s;
+    z-index: -1;
   }
 
   &__text {
@@ -127,10 +128,6 @@ export default {
     opacity: 0.8;
     margin-top: 15px;
   }
-}
-
-.contact-info__link +  .contact-info__square {
-  background-color: red;
 }
 </style>
 

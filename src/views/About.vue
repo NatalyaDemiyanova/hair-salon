@@ -2,6 +2,7 @@
   <div class="about-main">
     <app-layout class="about-main__layout" title="about us" />
     <the-about-description class="about-main__about-description" />
+    <the-choose-us />
     <the-comments />
     <the-awards />
     
@@ -11,6 +12,7 @@
 <script>
 import AppLayout from '../components/common/AppLayout'
 import TheAboutDescription from '../components/TheAboutDescription'
+import TheChooseUs from '../components/TheChooseUs'
 import TheComments from '../components/TheComments'
 import TheAwards from '../components/TheAwards'
 
@@ -19,6 +21,7 @@ export default {
   components: {
     AppLayout,
     TheAboutDescription,
+    TheChooseUs,
     TheComments,
     TheAwards
   }

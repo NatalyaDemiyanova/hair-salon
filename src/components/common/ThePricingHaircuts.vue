@@ -58,7 +58,7 @@ export default {
 .pricing-haircuts {
 
   &__list {
-    padding: 80px 30px 55px;
+    padding: 60px 30px;
     max-width: 720px;
     margin: 0 auto;
   }
