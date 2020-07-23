@@ -1,6 +1,6 @@
 <template>
   <div class="photo">
-    <div class="photo__container container">
+    <!-- <div class="photo__container container"> -->
 			<transition-group class="photo__list list-flip" name="list-flip" tag="ul">
 				<the-photo-item
 					class="list-flip-item"
@@ -9,7 +9,7 @@
 					:photo_data="photo"
 				/>
 			</transition-group>
-		</div>
+		<!-- </div> -->
   </div>
 </template>
 

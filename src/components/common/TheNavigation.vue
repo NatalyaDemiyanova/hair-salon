@@ -1,5 +1,5 @@
 <template>
-  <div class="navigation" v-scroll="handleScroll" id="nav">
+  <div class="navigation" id="nav">
     <div class="container navigation__container">
       <logo />
       <transition name="fade">
@@ -28,21 +28,12 @@ export default {
   data: function() {
     return {
       isActive: false,
-      handleScroll: false
     }
   },
   methods: {
     toggle: function() {
       this.isActive = !this.isActive;
     },
-
-    // handleScroll: function(evt, el) {
-    //   if (window.scrollY > 50) {
-    //     el.setAttribute("style", "color:red; ")
-    //   }
-    //   // return window.scrollY > 100;
-    // }
-    
   }
 }
 </script>
@@ -50,11 +41,10 @@ export default {
 <style lang="scss">
 .navigation {
   position: fixed;
-  // position: sticky;
   top: 0;
   right: 0;
   left: 0;
-  padding: 32px 0;
+  padding: 26px 0;
   background-color: $navigation-bg-color;
   z-index: 10;
 
@@ -82,51 +72,6 @@ export default {
       background-color: none;
     }
   }
-
-  // &__list {
-  //   position: absolute;
-  //   top: 100px;
-  //   right: 0px;
-  //   width: 100%;
-  //   padding: 50px 40px;
-  //   background-color: $navigation-bg-color;
-  //   @include flex(center, center, column);
-  //   display: none;
-  //   text-align: center;
-
-  //   @include media($screen-desktop) {
-  //     @include flex(space-between, center);
-  //     position: static;
-  //     width: auto;
-  //     top: 0;
-  //     padding: 0;
-  //     background-color: none;
-  //   }
-  // }
-
-  // &__item {
-  //   &:not(:last-of-type) {
-  //     margin-right: 0px;
-  //     margin-bottom: 24px;
-
-  //   }
-    
-  //   @include media($screen-desktop) {
-  //     &:not(:last-of-type) {
-  //       margin-right: 32px;
-  //       margin-bottom: 0px;
-  //     }
-  //   }
-  // }
-
-  // &__link {
-  //   // font-family: $secondary-font;
-  //   @include text($H200, 500, $white);
-  //   letter-spacing: .02em;
-  //   &:active {
-  //     color: $text-active;
-  //   }
-  // }
 }
 
 .router-link-active {

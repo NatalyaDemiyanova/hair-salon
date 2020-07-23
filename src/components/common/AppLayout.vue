@@ -25,7 +25,7 @@ export default {
 <style lang="scss">
 .layout {
 	@include flex(flex-start, center, column);
-	background-image: url(../../assets/layout-bg1.jpg);
+	background-image: url(../../assets/layout-bg.jpg);
 	@include background-image(no-repeat, center center);
 	padding: 140px 0 40px;
 
@@ -33,7 +33,7 @@ export default {
 		padding: 180px 0 120px;	
 	}
 	@include media {
-		padding: 260px 0 180px;
+		padding: 220px 0 140px;
 	}
 
 	&__title {

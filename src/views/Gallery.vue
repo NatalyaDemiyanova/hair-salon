@@ -132,7 +132,7 @@ export default {
 	}
 
   &__photo {
-    margin-bottom: 100px;
+    margin-bottom: 50px;
   }
 }
 </style>

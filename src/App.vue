@@ -1,20 +1,44 @@
 <template>
   <div id="app" class="app">
-    <the-navigation />	
+    <the-navigation v-scroll="handleScroll" />	
     <router-view class="app__router"/>
     <the-footer />
+    <the-scroll-top-arrow /> 
   </div>
 </template>
 
 <script>
 import TheNavigation from './components/common/TheNavigation'
 import TheFooter from './components/TheFooter'
+import TheScrollTopArrow from './components/common/TheScrollTopArrow'
 
 export default {
 	name: 'App',
 	components: {
     TheNavigation, 
-    TheFooter
+    TheFooter,
+    TheScrollTopArrow 
+  },
+
+  methods: {
+    handleScroll: function (evt, el) {
+      if (window.scrollY > 50) {
+        el.setAttribute(
+          'style',
+          'background-color: rgb(52, 51, 51);padding: 10px 0;'
+        )
+      }
+      else {
+        el.setAttribute(
+          'style',
+          ' background-color: $navigation-bg-color'
+        )
+      }
+    }
+  },
+
+  mounted: function () {
+    this.handleScroll()
   },
 }
 </script>
