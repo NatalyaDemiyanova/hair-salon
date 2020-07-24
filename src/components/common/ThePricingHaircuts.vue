@@ -1,4 +1,4 @@
-<template class="pricing-haircuts" id="haircuts-template">
+<template class="pricing-haircuts" id="haircuts">
   <ul class="pricing-haircuts__list">
     <li class="pricing-haircuts__item">
       <span class="pricing-haircuts__price">

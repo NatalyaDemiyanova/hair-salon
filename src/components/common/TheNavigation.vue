@@ -3,7 +3,7 @@
     <div class="container navigation__container">
       <logo />
       <transition name="fade">
-        <the-navigation-list class="navigation__header" :class="{_active: isActive}" />
+        <the-navigation-list class="navigation__header-navigation" :class="{_active: isActive}" />
       </transition>
       <div class="navigation__social"></div>
       <transition name="fade">
@@ -44,32 +44,40 @@ export default {
   top: 0;
   right: 0;
   left: 0;
-  padding: 26px 0;
-  background-color: $navigation-bg-color;
+  padding: 10px 0;
+  background-color: $navigation-bg-scroll-color;
   z-index: 10;
+
+  @include media($screen-desktop) {
+    padding: 26px 0;
+    background-color: $navigation-bg-color;
+  }
 
   &__container {
     @include flex(space-between, center);
   }
 
-  &__header {
+  &__header-navigation {
     position: absolute;
-    top: 100px;
+    top: 0px;
     right: 0px;
     width: 100%;
-    padding: 50px 40px;
-    // background-color: $navigation-bg-color;
+    height: 100vh;
+    padding: 120px 40px;
     @include flex(center, center, column);
     display: none;
     text-align: center;
+    z-index: -1;
 
     @include media($screen-desktop) {
       @include flex(center, center);
       position: static;
       width: auto;
+      height: auto;
       top: 0;
       padding: 0;
       background-color: none;
+      z-index: 5;
     }
   }
 }

@@ -5,13 +5,13 @@
       <div class="pricing__body">
         <ul class="pricing__list">
           <li class="pricing__item" @click="component='ThePricingHaircuts'" ref="component">
-            <a href="#" class="pricing__link" :class="{_active: component === 'ThePricingHaircuts'}">HAIRCUTS</a>
+            <a href="#haircuts" class="pricing__link" :class="{_active: component === 'ThePricingHaircuts'}">HAIRCUTS</a>
           </li>
           <li class="pricing__item" @click="component='ThePricingHairstyling'" ref="component">
-            <a href="#" class="pricing__link" :class="{_active: component === 'ThePricingHairstyling'}">HAIRSTYLING</a>
+            <a href="#hairstyling" class="pricing__link" :class="{_active: component === 'ThePricingHairstyling'}">HAIRSTYLING</a>
           </li>
           <li class="pricing__item" @click="component='ThePricingColoring'" ref="component"> 
-            <a href="#" class="pricing__link" :class="{_active: component === 'ThePricingColoring'}">COLORING</a>
+            <a href="#coloring" class="pricing__link" :class="{_active: component === 'ThePricingColoring'}">COLORING</a>
           </li> 
         </ul>
         <component :is="component" id="component"></component>

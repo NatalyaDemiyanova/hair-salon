@@ -1,7 +1,7 @@
 <template>
   <div id="app" class="app">
     <the-navigation v-scroll="handleScroll" />	
-    <router-view class="app__router"/>
+    <router-view class="app__router" @click="toggleRouter" />
     <the-footer />
     <the-scroll-top-arrow /> 
   </div>
@@ -20,6 +20,7 @@ export default {
     TheScrollTopArrow 
   },
 
+
   methods: {
     handleScroll: function (evt, el) {
       if (window.scrollY > 50) {
@@ -34,7 +35,7 @@ export default {
           ' background-color: $navigation-bg-color'
         )
       }
-    }
+    },
   },
 
   mounted: function () {
@@ -61,4 +62,7 @@ export default {
 //   color: #2c3e50;
 //   margin: 0 auto;
 // }
+._active {
+  display: block;
+}
 </style>
