@@ -3,9 +3,9 @@
     <div class="container navigation__container">
       <logo />
       <transition name="fade">
-        <the-navigation-list class="navigation__header-navigation" :class="{_active: isActive}" />
+        <the-navigation-list class="navigation__header-navigation"  :class="{_active: isActive}" />
       </transition>
-      <div class="navigation__social"></div>
+      <the-social-nav class="navigation__social-nav" />
       <transition name="fade">
         <the-burger @click="toggle" :class="{_active: isActive}" />
       </transition>
@@ -16,6 +16,7 @@
 <script>
 import Logo from './Logo.vue'
 import TheNavigationList from './TheNavigationList'
+import TheSocialNav from './TheSocialNav'
 import TheBurger from './TheBurger'
 
 export default {
@@ -23,18 +24,34 @@ export default {
   components: {
     Logo,
     TheBurger,
+    TheSocialNav,
     TheNavigationList
   },
   data: function() {
     return {
       isActive: false,
+      
     }
   },
   methods: {
     toggle: function() {
       this.isActive = !this.isActive;
     },
-  }
+
+    // closeNav: function() {
+    //   this.show = false
+    // } 
+  },
+
+  // mounted: function(){
+  //   this.closeNav()
+  // }
+
+  // watch:{
+  //   $route (to, from){
+  //       this.show = false;
+  //   }
+  // } 
 }
 </script>
 
@@ -80,14 +97,21 @@ export default {
       z-index: 5;
     }
   }
+
+  &__social-nav {
+    display: none;
+
+    @include media($screen-small-tablet) {
+      display: flex;
+    }
+  }
 }
 
 .router-link-active {
   color: $text-active;
 }
 
-._active {
-  display: block;
-}
-
+// ._active {
+//   display: block;
+// }
 </style> 

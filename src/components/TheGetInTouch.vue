@@ -3,10 +3,10 @@
     <div class="container get-in-touch__container">
       <h2 class="get-in-touch__title">Get in Touch</h2>
       <form class="get-in-touch__form">
-        <input class="get-in-touch__input" type="text" placeholder="Your Name">
-        <input class="get-in-touch__input" type="email" placeholder="E-mail">
-        <input class="get-in-touch__input" type="phone" placeholder="Phone">
-        <textarea class="get-in-touch__input get-in-touch__input--textarea" cols="30" rows="10" placeholder="Message"></textarea>
+        <input class="get-in-touch__input input" type="text" placeholder="Your Name">
+        <input class="get-in-touch__input input" type="email" placeholder="E-mail">
+        <input class="get-in-touch__input input" type="phone" placeholder="Phone">
+        <textarea class="get-in-touch__input get-in-touch__input--textarea input" cols="30" rows="10" placeholder="Message"></textarea>
         <app-button class="button button--black get-in-touch__button">
           <span class="get-in-touch__button-text">
             send
@@ -65,20 +65,10 @@ export default {
   }
 
   &__input {
-    width: 100%;
-    padding: 16px 25px;
-    outline: none;
-    border: 1px solid $dark;
     border-radius: 5px;
-    @include text($H200, 300);
-    line-height: 26px;
-    letter-spacing: 1px;
     margin-bottom: 20px;
     &--textarea {
       margin-bottom: 30px;
-    }
-    &:placeholder-shown {
-       @include text($H100, 300);
     }
   }
 
@@ -92,6 +82,20 @@ export default {
   textarea::-webkit-input-placeholder { 
     @include text($H100, 300);
     opacity: 0.7;
+  }
+}
+
+.input {
+  width: 100%;
+  padding: 16px 25px;
+  outline: none;
+  border: 1px solid $dark;
+  @include text($H200, 300);
+  line-height: 26px;
+  letter-spacing: 1px;
+
+  &:placeholder-shown {
+    @include text($H100, 300);
   }
 }
 </style>

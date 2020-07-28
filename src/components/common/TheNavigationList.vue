@@ -1,10 +1,10 @@
 <template>
-	<ul class="navigation__list" >
-		<li class="navigation__item">
-			<router-link class="navigation__link" exact to="/">HOME</router-link>
+	<ul class="navigation__list" :class="{_hide: isHide}" >
+		<li class="navigation__item" @click="closeNav">
+			<router-link class="navigation__link" exact to="/" @click="closeNav">HOME</router-link>
 		</li>
 		<li class="navigation__item">
-			<router-link class="navigation__link" to="/about">ABOUT US</router-link>
+			<router-link class="navigation__link" to="/about" @click="closeNav" >ABOUT US</router-link>
 		</li>
 		<li class="navigation__item">
 			<router-link class="navigation__link" to="/gallery">GALLERY</router-link>
@@ -22,6 +22,21 @@
 
 export default {
   name: 'TheNavigationList',
+  data: function() {
+    return {
+      isHide: false,
+    }
+  },
+
+  metod: {
+    closeNav: function() {
+      this.isHide = !this.isHide
+    } 
+  },
+  // watch: function() {
+  //   this.closeNav()
+  // }
+
 }
 </script>
 
@@ -69,7 +84,8 @@ export default {
   &__link {
     // font-family: $secondary-font;
     @include text($H200, 500, $white);
-		letter-spacing: .02em;
+    letter-spacing: .02em;
+    transition: all ease 0.3s;
 		
 		&:hover,
     &:active {
@@ -77,4 +93,6 @@ export default {
     }
   }
 }
+
+
 </style>

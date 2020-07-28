@@ -1,19 +1,25 @@
 <template>
-  <div class="discount">
+	<div class="discount">
 		<div class="container discount__container">
-			<h4 class="discount__title">
-				ONLY 3 DAYS
-			</h4>
+			<transition appear name="fade">
+				<h4 class="discount__title">
+					ONLY 3 DAYS
+				</h4>
+			</transition>
+			<transition appear name="fade">
 			<h2 class="discount__subtitle">
 				20% OFF HAIRSTYLING SERVICES
 			</h2>
+			</transition>
+			<transition appear name="fade">
 			<app-button>
 				<span class="discount__btn-text">
 					VIEW MORE
 				</span>
 			</app-button>
+			</transition>
 		</div>
-  </div>
+	</div>
 </template>
 
 <script>
@@ -54,5 +60,15 @@ export default {
 	&__btn-text {
 		padding: 0 20px;
 	}
+}
+
+.fade-enter-active, 
+.fade-leave-active {
+  transition: all 1s;
+}
+.fade-enter, 
+.fade-leave-to {
+	transform: translateY(100px);
+	opacity: 0;
 }
 </style>

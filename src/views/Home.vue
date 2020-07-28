@@ -4,6 +4,7 @@
     <the-form />
     <the-offer />
     <the-discount />
+    <the-subscribe />
   </div>
 </template>
 
@@ -12,6 +13,7 @@ import TheHeader from '../components/TheHeader'
 import TheForm from '../components/TheForm'
 import TheOffer from '../components/TheOffer'
 import TheDiscount from '../components/TheDiscount'
+import TheSubscribe from '../components/TheSubscribe'
 
 export default {
   name: 'Home',
@@ -19,7 +21,8 @@ export default {
    TheHeader,
    TheForm,
    TheOffer,
-   TheDiscount
+   TheDiscount,
+   TheSubscribe
   }
 }
 </script>

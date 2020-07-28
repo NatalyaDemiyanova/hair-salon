@@ -1,13 +1,19 @@
 <template>
 	<div class="header">
 		<div class="container header__container">
-			<h1 class="header__title">
-				STYLE
-			</h1>
-			<div class="header__divider"></div>
-			<h4 class="header__subtitle">
-				Hellen Hair Salon, established in 1999, is an oasis of beauty, hair indulgence, and the synonym of stylish haircuts.
-			</h4>
+			<transition appear name="fade">
+				<h1 class="header__title">
+					STYLE
+				</h1>
+			</transition>
+			<transition appear name="fade">
+				<div class="header__divider"></div>
+			</transition>
+			<transition appear name="fade">
+				<h4 class="header__subtitle">
+					Hellen Hair Salon, established in 1999, is an oasis of beauty, hair indulgence, and the synonym of stylish haircuts.
+				</h4>
+			</transition>
 		</div>
 	</div>
 </template>
@@ -48,7 +54,6 @@ export default {
 	&__title {
 		font-family: $secondary-font;
 		@include text($H900, 700, $white);
-		margin-bottom: 20px;
 
 		@include media($screen-desktop) {
 			@include text($H950, 700, $white);
@@ -69,4 +74,15 @@ export default {
 		text-align: center;
 	}
 }
+
+.fade-enter-active, 
+.fade-leave-active {
+  transition: all 0.5s;
+}
+.fade-enter, 
+.fade-leave-to {
+	transform: translateY(400px);
+	opacity: 0;
+}
+
 </style>

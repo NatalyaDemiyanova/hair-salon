@@ -4,14 +4,32 @@
     <div class="container pricing__container">
       <div class="pricing__body">
         <ul class="pricing__list">
-          <li class="pricing__item" @click="component='ThePricingHaircuts'" ref="component">
-            <a href="#haircuts" class="pricing__link" :class="{_active: component === 'ThePricingHaircuts'}">HAIRCUTS</a>
+          <li class="pricing__item">
+            <a href="#haircuts"
+             class="pricing__link" 
+             :class="{_active: component === 'ThePricingHaircuts'}"
+             @click.prevent="component='ThePricingHaircuts'"
+            >
+              HAIRCUTS
+            </a>
           </li>
-          <li class="pricing__item" @click="component='ThePricingHairstyling'" ref="component">
-            <a href="#hairstyling" class="pricing__link" :class="{_active: component === 'ThePricingHairstyling'}">HAIRSTYLING</a>
+          <li class="pricing__item">
+            <a href="#hairstyling" 
+              class="pricing__link" 
+              :class="{_active: component === 'ThePricingHairstyling'}"
+              @click.prevent="component='ThePricingHairstyling'" 
+            >
+              HAIRSTYLING
+            </a>
           </li>
-          <li class="pricing__item" @click="component='ThePricingColoring'" ref="component"> 
-            <a href="#coloring" class="pricing__link" :class="{_active: component === 'ThePricingColoring'}">COLORING</a>
+          <li class="pricing__item"> 
+            <a href="#coloring" 
+              class="pricing__link" 
+              :class="{_active: component === 'ThePricingColoring'}"
+              @click.prevent="component='ThePricingColoring'" 
+            >
+              COLORING
+            </a>
           </li> 
         </ul>
         <component :is="component" id="component"></component>
@@ -40,21 +58,6 @@ export default {
       component: 'ThePricingHaircuts', 
     }
   },
-
-  methods: {
-    scrollTo () {
-      this.$refs.component.scroll();
-    },
-  },
-
-  // scrollBehavior (to, from, savedPosition) {
-  //   if (to.hash) {
-  //     return {
-  //       selector: to.hash
-  //       // , offset: { x: 0, y: 10 }
-  //     }
-  //   }
-  // }
 }
 </script>
 
@@ -112,9 +115,12 @@ export default {
     cursor: pointer;
     transition: all 0.3s ease-in-out;
     
+    
     @include media($screen-desktop) {
       &:hover {
         opacity: 1;
+        text-decoration: none;
+        color: white;
       }
     }
   }

@@ -1,11 +1,23 @@
 <template>
-  <section class="offer">
+  <section class="offer"
+	>
 		<div class="offer__container container">
-			<h2 class="offer__title">WHAT WE OFFER</h2>
-			<p class="offer__description">
+			<h2 
+				class="offer__title" 
+				uk-scrollspy="cls:uk-animation-slide-top; repeat: true; delay: 300;"
+			>
+				WHAT WE OFFER
+			</h2>
+			<p 
+				class="offer__description" 
+				uk-scrollspy="cls:uk-animation-slide-top; repeat: true; delay: 300;"
+			>
 				We offer a complete range of hair services including haircuts & styling, coloring, eyebrow and eyelash tinting, perming, hair straightening, and a lot more.
 			</p>
-			<ul class="offer__list">
+			<ul 
+				class="offer__list"
+				uk-scrollspy="cls:uk-animation-slide-bottom-medium; repeat: true; delay: 300;"			
+			>
 				<li class="offer__item card">
 					<div class="card__image-wrapper">
 						<img class="card__image" src="../assets/offer/haircuts.jpg" alt="haircuts">
@@ -53,7 +65,7 @@ import AppButton from './common/AppButton'
 export default {
   name: 'TheOffer',
   components: {
-	AppButton
+		AppButton
   }
 }
 </script>
@@ -75,13 +87,16 @@ export default {
 
 	&__title {
 		font-family: $secondary-font;
-		@include text($H600, 600);
+		@include text($H600, 700);
 		text-transform: uppercase;
 		text-align: center;
 		margin-bottom: 25px;
 
-		@include media($screen-small-tablet) {
-			@include text($H700, 600);
+		@include media($screen-desktop) {
+			font-size: $H650;
+		}
+		@include media {
+			font-size: $H700;
 		}
 	}
 
@@ -147,12 +162,13 @@ export default {
 
 		&:hover + .card__button {
 			visibility: visible;
+			bottom: 15%;
 		}
 	}
 
 	&__button {
 		position: absolute;
-		bottom: 15%;
+		bottom: 20%;
 		left: 50%;
 		transform: translateX(-50%);
 		transition: all 0.3s ease-in-out;
@@ -160,6 +176,7 @@ export default {
 
 		&:hover {
 			visibility: visible;
+			bottom: 15%;
 		}
 	}
 
@@ -186,9 +203,6 @@ export default {
 		height: 15px;
 		text-align: center;
 	}
-}
-
-.button {
 }
 
 </style>

@@ -51,9 +51,9 @@ export default {
 
 <style lang="scss">
 .photo {
-	&__container {
+	// &__container {
 	
-	}
+	// }
 	&__list {
 		@include flex(space-between, center);
 		flex-wrap: wrap;
