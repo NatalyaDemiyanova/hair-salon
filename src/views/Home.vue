@@ -1,7 +1,7 @@
 <template>
   <div class="home">
-    <the-header />
-    <the-form />
+    <the-header class="home__header"/>
+    <the-form class="home__form"/>
     <the-offer />
     <the-discount />
     <the-subscribe />
@@ -26,3 +26,16 @@ export default {
   }
 }
 </script>
+
+<style lang="scss">
+.home {
+
+		&__header {
+      z-index: 10;
+		}
+
+		&__form {
+      z-index: 50;
+		}
+}
+</style>

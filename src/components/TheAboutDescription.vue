@@ -1,10 +1,10 @@
 <template>
   <div class="about">
 		<div class="container about__container">
-			<div class="about__image-wrapper">
+			<div class="about__image-wrapper" uk-scrollspy="cls:uk-animation-slide-left; repeat: true; delay: 300;">
 				<img class="about__image" src="../assets/about.jpg" alt="about">
 			</div>
-			<div class="about__content">
+			<div class="about__content" uk-scrollspy="cls:uk-animation-slide-right; repeat: true; delay: 300;">
 				<h2 class="about__title">ABOUT US</h2>
 				<div class="about__subtitle">
 					<div class="about__subtitle-divider"></div>

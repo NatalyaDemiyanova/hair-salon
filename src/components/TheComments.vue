@@ -1,7 +1,9 @@
 <template>
   <div class="comments">
 		<div class="container comments__container">
-			<h2 class="comments__title">TESTIMONIALS</h2>
+			<h2 class="comments__title" uk-scrollspy="cls:uk-animation-slide-top; repeat: true; delay: 300;">
+				TESTIMONIALS
+			</h2>
 			<div class="comments__wrapper-slider">
 				<the-slider-comments class="comments__slider"/>
 			</div>

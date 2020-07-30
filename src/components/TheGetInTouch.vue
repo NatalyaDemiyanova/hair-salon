@@ -3,9 +3,9 @@
     <div class="container get-in-touch__container">
       <h2 class="get-in-touch__title">Get in Touch</h2>
       <form class="get-in-touch__form">
-        <input class="get-in-touch__input input" type="text" placeholder="Your Name">
+        <input class="get-in-touch__input input" type="text" placeholder="Your Name" minlength="5" required>
         <input class="get-in-touch__input input" type="email" placeholder="E-mail">
-        <input class="get-in-touch__input input" type="phone" placeholder="Phone">
+        <input class="get-in-touch__input input" type="phone" placeholder="Phone" minlength="9" required>
         <textarea class="get-in-touch__input get-in-touch__input--textarea input" cols="30" rows="10" placeholder="Message"></textarea>
         <app-button class="button button--black get-in-touch__button">
           <span class="get-in-touch__button-text">
@@ -96,6 +96,17 @@ export default {
 
   &:placeholder-shown {
     @include text($H100, 300);
+  }
+  &:focus {
+    opacity: 1;
+    border-color: $secondary-color;
+  }
+  &:invalid:not(:placeholder-shown) {
+    border-color: red;
+  }
+
+  &:valid:not(:placeholder-shown) {
+    border-color: green;
   }
 }
 </style>

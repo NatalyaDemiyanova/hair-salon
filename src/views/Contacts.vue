@@ -1,7 +1,7 @@
 <template>
   <div class="contacts">
     <app-layout title="contacts" />
-    <the-contact-info />
+    <the-contact-info uk-scrollspy="cls:uk-animation-fade; repeat: true; delay: 300;"/>
     <the-get-in-touch class="contacts__get-in-touch"/>
   </div>
 </template>

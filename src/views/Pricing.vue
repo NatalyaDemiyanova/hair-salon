@@ -2,7 +2,7 @@
   <div class="pricing">
     <app-layout  title="pricing" class="pricing__layout"/>
     <div class="container pricing__container">
-      <div class="pricing__body">
+      <div class="pricing__body" uk-scrollspy="cls:uk-animation-fade; repeat: true; delay: 300;">
         <ul class="pricing__list">
           <li class="pricing__item">
             <a href="#haircuts"

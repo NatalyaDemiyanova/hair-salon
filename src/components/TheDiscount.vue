@@ -1,23 +1,23 @@
 <template>
 	<div class="discount">
-		<div class="container discount__container">
-			<transition appear name="fade">
+		<div class="container discount__container" uk-scrollspy="cls:uk-animation-scale-up; repeat: true; delay: 700;">
+			<!-- <transition appear name="fade"> -->
 				<h4 class="discount__title">
 					ONLY 3 DAYS
 				</h4>
-			</transition>
-			<transition appear name="fade">
+			<!-- </transition> -->
+			<!-- <transition appear name="fade"> -->
 			<h2 class="discount__subtitle">
 				20% OFF HAIRSTYLING SERVICES
 			</h2>
-			</transition>
-			<transition appear name="fade">
+			<!-- </transition> -->
+			<!-- <transition appear name="fade"> -->
 			<app-button>
 				<span class="discount__btn-text">
 					VIEW MORE
 				</span>
 			</app-button>
-			</transition>
+			<!-- </transition> -->
 		</div>
 	</div>
 </template>
@@ -29,7 +29,7 @@ export default {
   name: 'TheDiscount',
   components: {
     AppButton  
-  }
+	},
 }
 </script>
 
@@ -45,8 +45,8 @@ export default {
 
 	&__title {
 		font-family: $secondary-font;
-		@include text($H500, 700, $secondary-color);
-		margin-bottom: 10px;
+		@include text($H500, 600, $secondary-color);
+		margin-bottom: 25px;
 	}
 
 	&__subtitle {
@@ -55,6 +55,10 @@ export default {
 		text-align: center;
 		letter-spacing: 1;
 		margin-bottom: 35px;
+
+		@include media {
+			font-size: $H800;
+		}
 	}
 
 	&__btn-text {

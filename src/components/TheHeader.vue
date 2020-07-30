@@ -1,19 +1,21 @@
 <template>
-	<div class="header">
-		<div class="container header__container">
-			<transition appear name="fade">
-				<h1 class="header__title">
-					STYLE
-				</h1>
-			</transition>
-			<transition appear name="fade">
-				<div class="header__divider"></div>
-			</transition>
-			<transition appear name="fade">
-				<h4 class="header__subtitle">
-					Hellen Hair Salon, established in 1999, is an oasis of beauty, hair indulgence, and the synonym of stylish haircuts.
-				</h4>
-			</transition>
+	<div class="uk-overflow-hidden">
+		<div class="header" uk-scrollspy="cls:uk-animation-kenburns; repeat: true">
+			<div class="container header__container">
+				<!-- <transition appear name="fade"> -->
+					<h1 class="header__title">
+						STYLE
+					</h1>
+				<!-- </transition> -->
+				<!-- <transition appear name="fade"> -->
+					<div class="header__divider"></div>
+				<!-- </transition> -->
+				<!-- <transition appear name="fade"> -->
+					<h4 class="header__subtitle">
+						Hellen Hair Salon, established in 1999, is an oasis of beauty, hair indulgence, and the synonym of stylish haircuts.
+					</h4>
+				<!-- </transition> -->
+			</div>
 		</div>
 	</div>
 </template>
@@ -33,7 +35,7 @@ export default {
 	background-image: url(../assets/header-photo.png), linear-gradient(0deg, rgba(47,47,47,1) 0%, rgba(133,133,133,1) 100%);
 	@include background-image;
 	background-size: cover;
-	background-position: center center;
+	background-position: center bottom;
 
 	@include media($screen-tablet) {
 		background-size: contain;

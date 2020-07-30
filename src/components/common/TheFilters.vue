@@ -37,7 +37,7 @@
 				OTHER
 			</the-filter>
     </div>
-    <app-button class="filters__button button button--black">FILTER</app-button>
+    <!-- <app-button class="filters__button button button--black">FILTER</app-button> -->
   </div>
 </template>
 
@@ -86,11 +86,13 @@ export default {
   &__item {
     &:not(:last-of-type) {
       margin-right: 0px;
+      margin-bottom: 5px;
     }
 
     @include media($screen-small-tablet) {
       &:not(:last-of-type) {
         margin-right: 32px;
+        margin-bottom: 0px;
       }
     }
   }

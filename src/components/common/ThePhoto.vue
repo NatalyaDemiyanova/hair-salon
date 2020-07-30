@@ -28,37 +28,18 @@ export default {
 		default() {
 			return [];
 		}
-	}, 
-	
-	
-	
-  // computed: {
-	// 	...mapGetters([
-	// 		'PHOTOS'
-	// 	]),	
-  // },
-  // methods: {
-	// 	...mapActions([
-	// 		'GET_PHOTOS_FROM_API'
-	// 	]),
-
-  // },
-  // mounted() {
-  //   this.GET_PHOTOS_FROM_API()
-  // }
+	}
 }
 </script>
 
 <style lang="scss">
 .photo {
 	// &__container {
-	
 	// }
 	&__list {
 		@include flex(space-between, center);
 		flex-wrap: wrap;
 	}
-
 }
 .list-flip-item {
   transition: all 0.5s;

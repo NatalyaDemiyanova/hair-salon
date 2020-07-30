@@ -6,7 +6,7 @@
 			:filter="filter" 
 			v-model="filter" 
 		/>
-    <the-photo class="gallery__photo" :photos="getPhotos"/>
+    <the-photo class="gallery__photo" :photos="getPhotos" uk-scrollspy="cls:uk-animation-scale-up; repeat: true; delay: 300;"/>
   </div>
 </template>
 

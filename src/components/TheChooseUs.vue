@@ -1,9 +1,11 @@
 <template>
   <div class="choose-us">
     <div class="choose-us__container container">
-      <h2 class="choose-us__title">WHY PEOPLE CHOOSE US</h2>
-      <ul class="choose-us__list">
-        <li class="choose-us__item">
+      <h2 class="choose-us__title" uk-scrollspy="cls:uk-animation-scale-up; repeat: true; delay: 300;">
+        WHY PEOPLE CHOOSE US
+      </h2>
+      <ul class="choose-us__list" uk-scrollspy="cls:uk-animation-scale-up; repeat: true; delay: 300;">
+        <li class="choose-us__item" >
           <div class="choose-us__image-wrapper">
             <img class="choose-us__image" src="../assets/choose-us/eye.png" alt="eye">
           </div>
@@ -17,7 +19,7 @@
             </p>
           </div>
         </li>
-        <li class="choose-us__item">
+        <li class="choose-us__item" >
           <div class="choose-us__image-wrapper">
             <img class="choose-us__image" src="../assets/choose-us/hair.png" alt="hair">
           </div>
@@ -88,7 +90,6 @@
           </div>
         </li>
       </ul>
-
     </div>
   </div>
 </template>

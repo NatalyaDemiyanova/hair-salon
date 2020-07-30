@@ -1,42 +1,73 @@
 <template>
-  <form class="form">
+  <form class="form data-uk-form" @click.prevent="ShowNotification">
 		<div class="form__container container">
 			<div class="form__wrapper-label">
 				<label class="form__label">
 					NAME
-					<input class="form__input" type="text" placeholder="Your name">
+					<input class="form__input" type="text" placeholder="Your name" minlength="5" required>
 				</label>
 			</div>
 			<div class="form__wrapper-label">
 				<label class="form__label">
 					PHONE
-					<input class="form__input" type="phone" placeholder="Your phone number">
+					<input class="form__input" type="tel" placeholder="Your phone number" minlength="9" required>
 				</label>
 			</div>
 			<div class="form__wrapper-label">
 				<label class="form__label">
 					DATE
-					<input class="form__input" type="data" placeholder="20/07/2020">
+					<!-- <vueye-datepicker v-model="date" color="#C89667" format="dd/mm/yyyy"/> -->
+					<input class="form__input" type="data" placeholder="20/07/2020" required> 
 				</label>
 			</div>
-			<app-button class="form__button">make an appointment</app-button>
+				<!-- <button class="demo uk-button uk-button-default" type="button" onclick="UIkit.notification()"> -->
+			<app-button
+				class="form__button" 
+				type="submit"
+				@showNotification="notificationVisible = true"
+			>
+				make an appointment
+			</app-button>
+		<!-- </button> -->
+			<!-- <the-notification 
+				v-if="notificationVisible"  
+        @closeNotification="notificationVisible = false"
+			/> -->
 		</div>
   </form>
 </template>
 
 <script>
 import AppButton from './common/AppButton'
+// import VueyeDatepicker from "vueye-datepicker";
+// import TheNotification from './common/TheNotification'
 
 export default {
   name: 'TheForm',
   components: {
-		AppButton,  
-  }
+		// VueyeDatepicker,
+		AppButton,
+		// TheNotification  
+	},
+	data() {
+		return {
+			dateInput: "",
+			notificationVisible: false,
+		}
+	}, 
+	
+	// methods: {
+  //   ShowNotification(){
+  //     this.notificationVisible = true;
+  //   },
+  // }
+
 }
 </script>
 
 <style lang="scss">
 .form {
+	position: relative;
 	background-color: $dark;
 	padding: 60px 0;
 
@@ -81,6 +112,18 @@ export default {
 		&::placeholder {
 			@include text($H400, 400, $white);
 			opacity: 0.6;
+		}
+
+		&:focus {
+			opacity: 1;
+			border-color: $secondary-color;
+		}
+		&:invalid:not(:placeholder-shown) {
+			border-color: red;
+		}
+
+		&:valid:not(:placeholder-shown) {
+			border-color: green;
 		}
 	}
 

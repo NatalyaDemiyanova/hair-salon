@@ -43,20 +43,10 @@ export default {
   mounted: function () {
     this.handleScroll()
   },
-
-  watch: {
-    $route() {
-      console.log(11111111)
-      // обрабатываем изменение параметров маршрута...
-    }
-  }
 }
 </script>
 
 <style lang="scss">
-
-// @import "../node_modules/uikit/src/scss/uikit.scss";
-
 .app {
   display: flex;
   flex-direction: column;
@@ -86,7 +76,7 @@ export default {
 .fade-link-enter-active, 
 .fade-link-leave-active {
   // transition: all 0.5s;
-  transition: 0.5s;
+  transition: 0.3s;
 }
 .fade-link-enter, 
 .fade-link-leave-to {

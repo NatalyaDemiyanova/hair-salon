@@ -1,8 +1,10 @@
 <template>
   <div class="awards">
 		<div class="container awards__container">
-			<h2 class="awards__title">OUR AWARDS</h2>
-			<ul class="awards__list-image">
+			<h2 class="awards__title" uk-scrollspy="cls:uk-animation-slide-top; repeat: true; delay: 300;">
+				OUR AWARDS
+			</h2>
+			<ul class="awards__list-image" uk-scrollspy="cls:uk-animation-slide-bottom; repeat: true; delay: 300;">
 				<li class="awards__item-image">
 					<a class="awards__link" href="#">
 						<img class="awards__image" src="../assets/awards/award-1.png" alt="awards">

@@ -1,11 +1,11 @@
 <template>
   <div class="subscribe">
-    <div class="container subscribe__container">
+    <div class="container subscribe__container" uk-scrollspy="cls:uk-animation-slide-bottom-medium; repeat: true; delay: 500;">
       <h2 class="subscribe__title">
         SUBSCRIBE TO STAY INFORMED
       </h2>
       <form class="subscribe__form">
-        <input class="subscribe__input input" type="email" placeholder="E-mail">
+        <input class="subscribe__input input" type="mail" placeholder="E-mail" required>
         <app-button class="button button--black subscribe__button">
           subscribe
         </app-button>
