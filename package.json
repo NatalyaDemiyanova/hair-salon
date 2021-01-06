@@ -11,7 +11,7 @@
     "@commercetools-uikit/calendar": "^11.0.0-alpha.0",
     "@fortawesome/fontawesome-svg-core": "^1.2.29",
     "@fortawesome/vue-fontawesome": "^0.1.10",
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "core-js": "^3.6.5",
     "material-design-icons-iconfont": "^5.0.1",
     "uikit": "^3.5.5",
